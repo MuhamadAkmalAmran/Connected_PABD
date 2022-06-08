@@ -26,6 +26,11 @@ namespace Connected
                     }
                 }
             }
+            Console.ReadLine();
+        }
+        private static string GetConnectionString()
+        {
+            return "data source LENOVO\\AKMALAMRAN;database=akmal_exe2;User ID=sa;Password=uzumaki";
         }
     }
 }
