@@ -17,7 +17,13 @@ namespace Connected
                 SqlCommand cmd1 = new SqlCommand(query1, cn); cn.Open();
                 using (SqlDataReader dr1 = cmd1.ExecuteReader())
                 {
-                    while ()
+                    while (dr1.Read())
+                    {
+                        string query2 = "UPDATE Pembimbing_Akademik SET Keahlian = 'Jaringan' WHERE NIK = 333";
+                        SqlCommand cmd2 = new SqlCommand(query2, cn);
+                        cmd2.ExecuteNonQuery();
+                        Console.WriteLine("Data has been updated");
+                    }
                 }
             }
         }
